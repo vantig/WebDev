@@ -1,5 +1,4 @@
 ## WebDev
-*My web projects*
 
 https://vantig.github.io/WebDev/BrArchitects/
 ---
