@@ -417,8 +417,11 @@ header {
     flex-direction: column;
 
 }
-
+.section_contact form label{
+    width: 100%;
+}
 .section_contact form input {
+    width: 100%;
     border: 0;
     border-bottom: 1px solid #1d1d1d;
 
@@ -451,7 +454,11 @@ header {
         width: 24%;
 
     }
-
+    .section_contact form button{
+        width: 100%;
+        padding: 5px 0;
+        margin-top: 20px;
+    }
 }
 
 /*<!--map-->*/
