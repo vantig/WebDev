@@ -1,8 +1,4 @@
 
-*, *:before, *:after {
-    box-sizing: border-box; /*рассчитывает размер блока с учетом padding*/
-}
-
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
@@ -47,9 +43,10 @@ body {
     background-color: #ffffff;
     justify-content: space-between;
     width: 100%;
+    box-sizing: border-box;
     align-items: center;
     letter-spacing: 3px;
-    padding: 12px 10px;
+    padding: 12px 30px;
 }
 
 .nav_title {
@@ -92,8 +89,8 @@ body {
 
 
 .main {
-    width: 84%;
-    margin: 42px 8% 0 8%;
+    max-width: 86%;
+    margin:0  auto;
 }
 
 .header_burger {
@@ -138,9 +135,9 @@ header {
     }
 
     .main {
+        max-width: 90%;
         transition: all 0.6s linear 0.3s;
-        width: 92%;
-        margin: 42px 4% 0 4%;
+
     }
 
     .header_burger:before,
@@ -213,7 +210,7 @@ header {
     }
 
     .main.active {
-      margin-left: -16%;
+        margin-left: -16%;
     }
 
     nav.active {
@@ -224,9 +221,9 @@ header {
 /*intro------------------*/
 .intro {
 
-    background: #ba152f url('../assets/background.png') center no-repeat;
+    background: url('../assets/background.png') center no-repeat;
     background-size: cover;
-    height: 650px;
+    height: 90vh;
     width: 100%;
     position: relative;
 
@@ -270,22 +267,24 @@ header {
 .section_projects h3 {
     margin: 40px 0;
 }
-
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 .projects_container {
-    display: flex;
     width: 100%;
-
 }
 
 .projects_container_inner {
+    display: inline-block;
     width: 25%;
     position: relative;
-    padding-right: 1%;
-    padding-bottom: 1%;
+    padding: 0;
+    margin: 0;
 }
 
 .projects_container_inner:last-child {
-
     margin-right: 0;
 }
 
@@ -293,6 +292,8 @@ header {
 .projects_container_inner img {
     height: 100%;
     width: 100%;
+    padding: 0;
+    margin: 0;
     object-fit: cover;
 }
 
@@ -308,9 +309,6 @@ header {
 }
 
 @media (max-width: 767px) {
-    .projects_container {
-        flex-wrap: wrap;
-    }
 
     .projects_container_inner {
         width: 50%;
@@ -327,16 +325,14 @@ header {
 }
 
 .about_container {
-    display: flex;
     margin-top: 4%;
 
 }
 
 .about_container_inner {
     position: relative;
-    padding-right: 1%;
-    padding-bottom: 1%;
     width: 25%;
+    display: inline-block;
 }
 
 .about_container_inner:last-child {
@@ -394,9 +390,6 @@ header {
         margin-bottom: 5%;
     }
 
-    .about_container {
-        flex-wrap: wrap;
-    }
 
     .about_container_inner {
         width: 50%;
@@ -417,9 +410,11 @@ header {
     flex-direction: column;
 
 }
-.section_contact form label{
+
+.section_contact form label {
     width: 100%;
 }
+
 .section_contact form input {
     width: 100%;
     border: 0;
@@ -449,12 +444,14 @@ header {
         width: 100%;
         text-align: center;
     }
+
     .section_contact form button {
 
         width: 24%;
 
     }
-    .section_contact form button{
+
+    .section_contact form button {
         width: 100%;
         padding: 5px 0;
         margin-top: 20px;
