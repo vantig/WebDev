@@ -141,6 +141,7 @@ header {
         max-width: 90%;
         transition: all 0.6s linear 0.3s;
         margin: 0 auto;
+        animation: main 2s ease-in-out infinite;
     }
 
     .header_burger:before,
@@ -213,7 +214,7 @@ header {
     }
 
     .main.active {
-        margin-left: -16%;
+        opacity:0.5;
     }
 
     nav.active {
