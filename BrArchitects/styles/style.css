@@ -478,9 +478,8 @@ header {
     padding: 40px 0;
     position: relative;
 }
-.footer_text:before {
-    content: "©";
-    top: 28px;
-    right:434px;
+.footer_text span{
     position: absolute;
+    top: 30px;
 }
+
