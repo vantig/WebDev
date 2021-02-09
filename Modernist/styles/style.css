@@ -5,6 +5,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
     margin: 0;
 }
+
 a {
     cursor: pointer;
     text-decoration: none;
@@ -15,9 +16,22 @@ a:visited {
 
     color: white;
 }
-button,li,img,.services_inner,.work_inner{
+button {
+    transition: transform .2s linear;
+}
+
+button:hover {
+    transform: scale(1.05, 1.05);
+    cursor: pointer;
+    z-index: 10;
+}
+button:active{
+    background-color: #3f8054;;
+}
+button, li, img, .services_inner, .work_inner {
     cursor: pointer;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -25,6 +39,7 @@ body {
 
 }
 
+/*first*/
 .container_first {
     width: 100%;
     border-top: 5px solid #76C38F;
@@ -41,6 +56,8 @@ body {
 
 .flex_container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
@@ -54,6 +71,7 @@ body {
 }
 
 .nav_title {
+    margin-top: 30px;
     display: inline-block;
     margin-bottom: 12px;
     font-size: 28px;
@@ -67,30 +85,29 @@ ul {
 .nav-list {
     text-transform: uppercase;
     list-style-type: none;
-    justify-content: space-between;
+
 }
 
 .nav-list-element {
-padding: 10px 20px;
+    padding: 10px 20px;
     cursor: pointer;
-   border-radius: 10px;
-    transition:background-color  0.3s linear;
+    border-radius: 10px;
+    transition: background-color 0.3s linear;
 }
-.nav-list-element:hover{
+
+.nav-list-element:hover {
     background-color: #76C38F;
 }
+
 .nav-list-element:first-child {
     margin: 0;
 
 }
 
 
-
 /*title*/
 .slider {
     margin-top: 42px;
-    box-sizing: border-box;
-
     align-items: center;
 
 }
@@ -109,26 +126,67 @@ padding: 10px 20px;
     margin-left: 45px;
     width: 320px;
 }
-.title_block h1{
+
+.title_block h1 {
     color: white;
     font-size: 46px;
 }
-.title_block p{
+
+.title_block p {
     margin-top: 10px;
     margin-bottom: 30px;
     color: #979797;
     font-size: 12px;
 }
-.title_block_button{
+
+.title_block_button {
     color: white;
     background-color: #76C38F;
     padding: 10px 15px;
 }
+
+@media (max-width: 1023px) {
+
+    .flex_container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .container_inner {
+        width: 80%;
+    }
+
+    .container_first {
+        height: 100%;
+    }
+
+    .image_holder {
+        display: none;
+    }
+}
+@media (max-width:810px)
+{
+    .nav-list{
+        display: none;
+    }
+    .title_block{
+        text-align: center;
+        margin: 0;
+    }
+    .slider img{
+        display: none;
+    }
+    .title_block_button{
+        padding: 15px 0;
+        width: 80%;
+    }
+
+}
+
 /*container_second*/
 .services {
-    justify-content: space-between;
-    margin: 60px 0 40px 0;
 
+    margin: 60px 0 40px 0;
 }
 
 .services_inner {
@@ -138,11 +196,13 @@ padding: 10px 20px;
     height: 305px;
     text-align: center;
     background-color: #fff;
-    transition:all  0.3s linear;
+    transition: all 0.3s linear;
 }
-.services_inner:hover{
-    background-color:#76C38F;
+
+.services_inner:hover {
+    background-color: #76C38F;
 }
+
 .services_inner_img {
     margin: 0 auto;
     width: 120px;
@@ -188,8 +248,7 @@ padding: 10px 20px;
 }
 
 .work {
-    justify-content: space-between;
-    flex-wrap: wrap;
+
     margin-top: 30px;
     margin-bottom: 60px;
 }
@@ -201,17 +260,17 @@ padding: 10px 20px;
     box-sizing: border-box;
     position: relative;
     transition: all 0.3s linear;
-
-}
-.work_inner:hover{
-    border-color: #76C38F;
-}
-.work_inner:hover .work_inner_subtitle{
-    opacity: 0;
-}
-.work_inner:nth-child(3) {
     margin-bottom: 30px;
 }
+
+.work_inner:hover {
+    border-color: #76C38F;
+}
+
+.work_inner:hover .work_inner_subtitle {
+    opacity: 0;
+}
+
 
 .work_inner_subtitle {
     text-transform: uppercase;
@@ -227,6 +286,40 @@ padding: 10px 20px;
     transition: all 0.3s linear;
 }
 
+@media (max-width: 1023px) {
+    .services {
+        margin-bottom: 0;
+    }
+
+    .services_inner {
+        margin-bottom: 30px;
+    }
+
+    .work {
+        margin-bottom: 0;
+    }
+
+    .services {
+        margin-bottom: 0;
+    }
+
+    .services_inner {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 749px) {
+    .work_inner {
+        width: 90%;
+    }
+}
+
+@media (max-width: 559px) {
+    .services_inner {
+        width: 90%;
+    }
+}
+
 /*
 third*/
 .container_third {
@@ -234,10 +327,12 @@ third*/
     height: 387px;
     background-color: #303030;
 }
-.footer_flex{
-  padding-top: 37px;
-    justify-content: space-between;
+
+.footer_flex {
+    padding-top: 37px;
+
 }
+
 .footer_flex_inner {
     width: 225px;
     text-align: left;
@@ -347,14 +442,15 @@ third*/
     color: rgb(118, 195, 142);
 }
 
-.contact p{
+.contact p {
     font-size: 16px;
     line-height: 1.2;
     color: white;
     margin-bottom: 30px;
 }
-.contact input,textarea{
-    color:  white;
+
+.contact input, textarea {
+    color: white;
     border: 0;
     line-height: 1.2;
     width: 100%;
@@ -366,38 +462,79 @@ third*/
     box-sizing: border-box;
 
 }
-.contact input,textarea,button{
+
+.contact input, textarea, button {
     border-radius: 10px;
     border: 0;
 }
-textarea{
+
+textarea {
     resize: none;
     height: 80px;
 }
-::placeholder{
+
+::placeholder {
     color: #989898;
 }
-input:focus,select:focus,textarea:focus,button:focus{
+
+input:focus, select:focus, textarea:focus, button:focus {
     outline: none;
 }
-.contact_button{
+
+.contact_button {
     background-color: #76C38F;
     padding: 10px 15px;
 }
-.footer_line{
+@media (max-width: 1023px) {
+  .container_third{
+        height: 100%;
+  }
+    .footer_flex_inner{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 562px) {
+    .footer_flex_inner {
+
+        width: 90%;
+    }
+
+    .footer_flex_inner p:first-child {
+        text-align: center;
+    }
+
+    .links,.contact{
+        text-align: center;
+    }
+    .links li:before{
+     display: none;
+    }
+    .links li:after{
+      width: 100%;
+    }
+    .contact_button{
+        padding: 15px 0;
+        width: 100%;
+    }
+
+}
+/*-------------------*/
+    .footer_line {
     width: 100%;
     height: 1px;
     background-color: #000000;
 }
-.copyright_container{
+
+.copyright_container {
     color: #979797;
     height: 60px;
     border-top: 1px solid #3A3A3A;
     width: 100%;
     background-color: #2B2B2B;
 }
-.copyright_container_inner{
+
+.copyright_container_inner {
     height: 100%;
-    justify-content: space-between;
+text-align: center;
     align-items: center;
 }
